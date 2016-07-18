@@ -84,15 +84,15 @@
 
 
 
-<meta name="description" content="IT行业的文科生">
+<meta name="description" content="IT行业的文科夜猫子">
 <meta property="og:type" content="website">
 <meta property="og:title" content="zZ">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="zZ">
-<meta property="og:description" content="IT行业的文科生">
+<meta property="og:description" content="IT行业的文科夜猫子">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="zZ">
-<meta name="twitter:description" content="IT行业的文科生">
+<meta name="twitter:description" content="IT行业的文科夜猫子">
 
 
 
@@ -214,16 +214,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-project">
-          <a href="https://webzzk.github.io/web" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />
-            
-            项目
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -264,7 +254,7 @@
               
                 
                 <a class="post-title-link" href="/2016/06/16/node2/" itemprop="url">
-                  NodeJS (二、安装)
+                  NodeJS (二、简单使用及模块)
                 </a>
               
             
@@ -333,17 +323,16 @@
       
         
           
-            <p><img src="/nodeJs/nodejs.jpg" alt="image"><br><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。</p>
-<p>博主电脑 Win10 64的，安装完使用的时候发生一个致命的错误！死活找不到原因，留到以后再说。。。。。</p>
-<p>据说 ，Node.js和Java非常像，跨平台的。不管是Linux还是windows编程是完全一致的（有一些不一样，比如路径的表述）。Linux版本的Node.js环境和windows环境是不一样的，但是编程语言一样。很像Java虚拟机。</p>
-<h2 id="下载-安装"><a href="#下载-安装" class="headerlink" title="下载/安装"></a>下载/安装</h2><ul>
-<li>找个靠谱的地方下载，比如<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js官网</a> / 大神们搞得<a href="http://nodejs.cn" target="_blank" rel="external">Node.js中文网</a>，默认下一步就好。</li>
-<li>安装完成后配置系统变量：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">右键 我的电脑 &gt; 属性 &gt; 高级系统设置 &gt; 高级 &gt; 环境变量</div></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>睡觉。。起来再写</p>
+          Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
+模块Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。打开Node.js官网 / Node.js中文网查看帮助文档。其中大部分为模块，都可以通过 require（require表示引包，引包就是引用自己的一个特殊功能） 引用。
+选择你要使用的模块，打开，里面有详细介绍
+          ...
 
-          
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/16/node2/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -461,55 +450,18 @@
       
         
           
-            <p><img src="/nodeJs/node.png" alt="image"><br><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。</p>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><h3 id="与传统后台语言对比"><a href="#与传统后台语言对比" class="headerlink" title="与传统后台语言对比"></a>与传统后台语言对比</h3><ul>
-<li><p>Node.js不是一种独立的语言，与PHP、JSP、Python、Perl、Ruby的“既是语言，也是平台”不同，Node.js的使用JavaScript进行编程，运行在JavaScript引擎上（V8）。</p>
-</li>
-<li><p>与PHP、JSP等相比（PHP、JSP、.net都需要运行在服务器程序上，Apache、Naginx、Tomcat、IIS。），Node.js跳过了Apache、Naginx、IIS等HTTP服务器，它自己不用建设在任何服务器软件之上。Node.js的许多设计理念与经典架构（LAMP = Linux + Apache + MySQL + PHP）有着很大的不同，可以提供强大的伸缩能力。</p>
-</li>
-</ul>
-<h3 id="特点"><a href="#特点" class="headerlink" title="特点"></a>特点</h3><p>所谓的特点，就是Node.js是如何解决服务器高性能瓶颈问题的。</p>
-<h4 id="单线程-Single-thread"><a href="#单线程-Single-thread" class="headerlink" title="单线程 ( Single thread )"></a>单线程 ( Single thread )</h4><ul>
-<li><p>在Java、PHP或者.net等服务器端语言中，会为每一个客户端连接创建一个新的线程。而每个线程需要耗费大约2MB内存。也就是说，理论上，一个1GB内存的服务器可以同时连接的最大用户数为500个左右。要让Web应用程序支持更多的用户，就需要增加服务器的数量，而Web应用程序的硬件成本当然就上升了。</p>
-</li>
-<li><p>Node.js不为每个客户连接创建一个新的线程，而仅仅使用一个线程。当有用户连接了，就触发一个内部事件，通过非阻塞I/O、事件驱动机制，让Node.js程序宏观上也是并行的。使用Node.js，一个1GB内存的服务器，可以同时处理超过5000用户的连接。</p>
-</li>
-<li><p>单线程的带来的好处，还有操作系统完全不再有线程创建、销毁的时间开销。</p>
-</li>
-<li><p>坏处，就是一个用户造成了线程的崩溃，整个服务都崩溃了。<br>—— Node.js不够健壮。所以Node不会应用在银行、证券等需要极高可靠性的业务。</p>
-</li>
-<li><p>多线程与单线程的对比<br>宏观上单线程也能造成“并发”。<br><img src="/nodeJs/Multi-thread.png" alt="image"><br><img src="/nodeJs/Single-thread.png" alt="image"></p>
-</li>
-</ul>
-<h4 id="非阻塞I-O-Non-blocking-I-O"><a href="#非阻塞I-O-Non-blocking-I-O" class="headerlink" title="非阻塞I/O ( Non-blocking I/O )"></a>非阻塞I/O ( Non-blocking I/O )</h4><ul>
-<li><p>例如，当在访问数据库取得数据的时候，需要一段时间。在传统的单线程处理机制中，在执行了访问数据库代码之后，整个线程都将暂停下来，等待数据库返回结果，才能执行后面的代码。<br><code>也就是说，I/O阻塞了代码的执行，极大地降低了程序的执行效率</code>。</p>
-</li>
-<li><p>由于Node.js中采用了非阻塞型I/O机制，因此在执行了访问数据库的代码之后，将立即转而执行其后面的代码，把数据库返回结果的处理代码放在回调函数中，从而提高了程序的执行效率。</p>
-</li>
-<li><p>当某个I/O执行完毕时，将以事件的形式通知执行I/O操作的线程，线程执行这个事件的回调函数。为了处理异步I/O，线程必须有事件循环，不断的检查有没有未处理的事件，依次予以处理。</p>
-</li>
-<li><p>阻塞模式下，一个线程只能处理一项任务，要想提高吞吐量必须通过多线程。而非阻塞模式下，一个线程永远在执行计算操作，这个线程的CPU核心利用率永远是100%。</p>
-</li>
-</ul>
-<h4 id="事件驱动-event-driven"><a href="#事件驱动-event-driven" class="headerlink" title="事件驱动 ( event-driven )"></a>事件驱动 ( event-driven )</h4><ul>
-<li><p>在Node中，客户端请求建立连接，提交数据等行为，会触发相应的事件。<code>在Node中，在一个时刻，只能执行一个事件回调函数，但是在执行一个事件回调函数的中途，可以转而处理其他事件</code>（比如，又有新用户连接了），然后返回继续执行原事件的回调函数，这种处理机制，称为“事件环”机制。</p>
-</li>
-<li><p>Node.js底层是C++（V8也是C++写的）。底层代码中，近半数都用于事件队列、回调函数队列的构建。用事件驱动来完成服务器的任务调度，用一个线程，担负起了处理非常多的任务的使命。</p>
-</li>
-</ul>
-<p><img src="/nodeJs/event-driven.png" alt="image"></p>
-<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul>
-<li><code>单线程</code>，单线程的好处，减少了内存开销，操作系统的内存换页。</li>
-<li>`如果某一个事情，进入了，但是被I/O阻塞了，所以这个线程就阻塞了。</li>
-<li><code>非阻塞I/O</code>， 不会傻等I/O语句结束，而会执行后面的语句。`</li>
-<li><code>事件机制，事件环</code>，不管是新用户的请求，还是老用户的I/O完成，都将以事件方式加入事件环，等待调度。</li>
-<li>Node.js中所有的I/O都是异步的，回调函数，套回调函数。</li>
-<li><code>想想，其实三个特点，实际上就是一个特点。</code></li>
-<li>与老牌后台语言还有一定的差距。</li>
-</ul>
-<h3 id="Nodejs适合-不适合的领域"><a href="#Nodejs适合-不适合的领域" class="headerlink" title="Nodejs适合/不适合的领域"></a>Nodejs适合/不适合的领域</h3><p>善于I/O，不善于计算。<br>通过介绍，关于适合的与不适合的大家认真思考一下，，，，，</p>
+          Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
+简介与传统后台语言对比
+Node.js不是一种独立的语言，与PHP、JSP、Python、Perl、Ruby的“既是语言，也是平台”不同，Node.js的使用JavaScript进行编程，运行在JavaScript引擎上（V8）。
 
-          
+与PHP、JSP等相比（PHP、JSP、.net都需要运行在服务器程序上，Apache、Nag
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/15/node1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
         
       
     </div>
@@ -572,7 +524,7 @@
                src="/uploads/zzk.jpg"
                alt="zZ" />
           <p class="site-author-name" itemprop="name">zZ</p>
-          <p class="site-description motion-element" itemprop="description">IT行业的文科生</p>
+          <p class="site-description motion-element" itemprop="description">IT行业的文科夜猫子</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">

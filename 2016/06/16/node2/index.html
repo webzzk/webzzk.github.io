@@ -85,22 +85,22 @@
 
 
 <meta name="description" content="Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
-博主电脑 Win10 64的，安装完使用的时候发生一个致命的错误！死活找不到原因，留到以后再说。。。。。
-据说 ，Node.js和Java非常像，跨平台的。不管是Linux还是windows编程是完全一致的（有一些不一样，比如路">
+模块Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。打开Node.js官网 / Node.js中文网查看帮助文档。其中大部分为模块，都可以通过 require（req">
 <meta property="og:type" content="article">
-<meta property="og:title" content="NodeJS (二、安装)">
+<meta property="og:title" content="NodeJS (二、简单使用及模块)">
 <meta property="og:url" content="http://yoursite.com/2016/06/16/node2/index.html">
 <meta property="og:site_name" content="zZ">
 <meta property="og:description" content="Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
-博主电脑 Win10 64的，安装完使用的时候发生一个致命的错误！死活找不到原因，留到以后再说。。。。。
-据说 ，Node.js和Java非常像，跨平台的。不管是Linux还是windows编程是完全一致的（有一些不一样，比如路">
+模块Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。打开Node.js官网 / Node.js中文网查看帮助文档。其中大部分为模块，都可以通过 require（req">
 <meta property="og:image" content="http://yoursite.com/nodeJs/nodejs.jpg">
-<meta property="og:updated_time" content="2016-07-17T20:21:37.555Z">
+<meta property="og:image" content="http://yoursite.com/nodeJs/nodehelp.png">
+<meta property="og:image" content="http://yoursite.com/nodeJs/httpServer.png">
+<meta property="og:image" content="http://yoursite.com/nodeJs/HW1.png">
+<meta property="og:updated_time" content="2016-07-18T06:58:19.409Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="NodeJS (二、安装)">
+<meta name="twitter:title" content="NodeJS (二、简单使用及模块)">
 <meta name="twitter:description" content="Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
-博主电脑 Win10 64的，安装完使用的时候发生一个致命的错误！死活找不到原因，留到以后再说。。。。。
-据说 ，Node.js和Java非常像，跨平台的。不管是Linux还是windows编程是完全一致的（有一些不一样，比如路">
+模块Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。打开Node.js官网 / Node.js中文网查看帮助文档。其中大部分为模块，都可以通过 require（req">
 <meta name="twitter:image" content="http://yoursite.com/nodeJs/nodejs.jpg">
 
 
@@ -119,7 +119,7 @@
   };
 </script>
 
-  <title> NodeJS (二、安装) | zZ </title>
+  <title> NodeJS (二、简单使用及模块) | zZ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -221,16 +221,6 @@
           </a>
         </li>
       
-        
-        <li class="menu-item menu-item-project">
-          <a href="https://webzzk.github.io/web" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tasks"></i> <br />
-            
-            项目
-          </a>
-        </li>
-      
 
       
     </ul>
@@ -269,7 +259,7 @@
             
             
               
-                NodeJS (二、安装)
+                NodeJS (二、简单使用及模块)
               
             
           </h1>
@@ -336,14 +326,14 @@
 
       
         <p><img src="/nodeJs/nodejs.jpg" alt="image"><br><a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js</a>是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。</p>
-<p>博主电脑 Win10 64的，安装完使用的时候发生一个致命的错误！死活找不到原因，留到以后再说。。。。。</p>
-<p>据说 ，Node.js和Java非常像，跨平台的。不管是Linux还是windows编程是完全一致的（有一些不一样，比如路径的表述）。Linux版本的Node.js环境和windows环境是不一样的，但是编程语言一样。很像Java虚拟机。</p>
-<h2 id="下载-安装"><a href="#下载-安装" class="headerlink" title="下载/安装"></a>下载/安装</h2><ul>
-<li>找个靠谱的地方下载，比如<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js官网</a> / 大神们搞得<a href="http://nodejs.cn" target="_blank" rel="external">Node.js中文网</a>，默认下一步就好。</li>
-<li>安装完成后配置系统变量：<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">右键 我的电脑 &gt; 属性 &gt; 高级系统设置 &gt; 高级 &gt; 环境变量</div></pre></td></tr></table></figure>
-</li>
+<h2 id="模块"><a href="#模块" class="headerlink" title="模块"></a>模块</h2><p>Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。<br>打开<a href="https://nodejs.org/en/" target="_blank" rel="external">Node.js官网</a> / <a href="http://nodejs.cn" target="_blank" rel="external">Node.js中文网</a>查看帮助文档。<br><img src="/nodeJs/nodehelp.png" alt="image"><br>其中大部分为模块，都可以通过 require（require表示引包，引包就是引用自己的一个特殊功能） 引用。</p>
+<p>选择你要使用的模块，打开，里面有详细介绍及代码示例（万能的翻译软件。。）。例：<br><img src="/nodeJs/httpServer.png" alt="image"></p>
+<h2 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h2><p>新建任意 JS 文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">//引包</div><div class="line">var http = require(<span class="string">"http"</span>);</div><div class="line">//创建服务器，参数是一个回调函数，表示如果有请求进来，要做什么</div><div class="line">var server = http.createServer(<span class="keyword">function</span>(req,res)&#123;</div><div class="line"></div><div class="line">	//req表示请求，request;  res表示响应，response</div><div class="line">	//设置HTTP头部，状态码是200，文件类型是html，字符集是utf8</div><div class="line"></div><div class="line">   	res.writeHead(200,&#123;<span class="string">"Content-type"</span>:<span class="string">"text/html;charset=UTF-8"</span>&#125;);</div><div class="line"></div><div class="line">	// end() 结束响应，告诉客户端所有消息已经发送。</div><div class="line">	//当所有要返回的内容发送完毕时，该函数必须被调用一次。如何不调用该函数，客户端将永远处于等待状态。</div><div class="line"></div><div class="line">   	res.end(<span class="string">"这是我的第"</span> + (1+2+3-2) + <span class="string">"个"</span>);</div><div class="line">&#125;);</div><div class="line">	</div><div class="line">//运行服务器，监听3000端口（端口号可以任改）</div><div class="line"></div><div class="line">server.listen(3000,<span class="string">"127.0.0.1"</span>);</div></pre></td></tr></table></figure></p>
+<p>打开命令提示符（快捷键 Win + R），切换到文件所在位置（最好相对路径，绝对路径遇到的问题以后再说）</p>
+<ul>
+<li>node yourFileName &gt; 回车<br><img src="/nodeJs/HW1.png" alt="image"></li>
+<li>浏览器输入你的 server.listen 的值（127.0.0.1:3000）<br>如果想修改程序，必须中断当前运行的服务器，重新node一次，刷新，才行。<br><code>ctrl+c，就可以打断挂起的服务器程序。</code></li>
 </ul>
-<p>睡觉。。起来再写</p>
 
       
     </div>
@@ -407,7 +397,7 @@
   <div class="comments" id="comments">
     
       <div class="ds-thread" data-thread-key="2016/06/16/node2/"
-           data-title="NodeJS (二、安装)" data-url="http://yoursite.com/2016/06/16/node2/">
+           data-title="NodeJS (二、简单使用及模块)" data-url="http://yoursite.com/2016/06/16/node2/">
       </div>
     
   </div>
@@ -447,7 +437,7 @@
                src="/uploads/zzk.jpg"
                alt="zZ" />
           <p class="site-author-name" itemprop="name">zZ</p>
-          <p class="site-description motion-element" itemprop="description">IT行业的文科生</p>
+          <p class="site-description motion-element" itemprop="description">IT行业的文科夜猫子</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
@@ -509,7 +499,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#下载-安装"><span class="nav-number">1.</span> <span class="nav-text">下载/安装</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#模块"><span class="nav-number">1.</span> <span class="nav-text">模块</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#简单使用"><span class="nav-number">2.</span> <span class="nav-text">简单使用</span></a></li></ol></div>
             
           </div>
         </section>
