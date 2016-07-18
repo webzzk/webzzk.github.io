@@ -1,0 +1,835 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="想起什么写什么," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="选择器
+计数器
+多列
+CSS HACK
+transform(2D/3D)
+transition
+animation
+
+
+选择器
+兄弟选择器- 相邻兄弟:匹配下一个相邻元素。注:只能向下找。
+    语法: + 作为结合符
+        selector1 + selector2
+- 通用兄弟选择器:匹配某元素后面[所有的]兄弟元素。
+    语法: ~ 作为结合符
+        select">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端知识复习整理 (二、CSS3)">
+<meta property="og:url" content="http://yoursite.com/2016/06/18/web2/index.html">
+<meta property="og:site_name" content="zZ">
+<meta property="og:description" content="选择器
+计数器
+多列
+CSS HACK
+transform(2D/3D)
+transition
+animation
+
+
+选择器
+兄弟选择器- 相邻兄弟:匹配下一个相邻元素。注:只能向下找。
+    语法: + 作为结合符
+        selector1 + selector2
+- 通用兄弟选择器:匹配某元素后面[所有的]兄弟元素。
+    语法: ~ 作为结合符
+        select">
+<meta property="og:updated_time" content="2016-07-18T15:18:45.477Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="前端知识复习整理 (二、CSS3)">
+<meta name="twitter:description" content="选择器
+计数器
+多列
+CSS HACK
+transform(2D/3D)
+transition
+animation
+
+
+选择器
+兄弟选择器- 相邻兄弟:匹配下一个相邻元素。注:只能向下找。
+    语法: + 作为结合符
+        selector1 + selector2
+- 通用兄弟选择器:匹配某元素后面[所有的]兄弟元素。
+    语法: ~ 作为结合符
+        select">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+  <title> 前端知识复习整理 (二、CSS3) | zZ </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?dc39ac5d57d03898ccc4e5f4170837c0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">zZ</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                前端知识复习整理 (二、CSS3)
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-18T20:20:39+08:00" content="2016-06-18">
+              2016-06-18
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Web-developer/" itemprop="url" rel="index">
+                    <span itemprop="name">Web developer</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/18/web2/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/web2/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>选择器</li>
+<li>计数器</li>
+<li>多列</li>
+<li>CSS HACK</li>
+<li>transform(2D/3D)</li>
+<li>transition</li>
+<li>animation</li>
+</ul>
+<blockquote>
+<h2 id="选择器"><a href="#选择器" class="headerlink" title="选择器"></a>选择器</h2></blockquote>
+<h3 id="兄弟选择器"><a href="#兄弟选择器" class="headerlink" title="兄弟选择器"></a>兄弟选择器</h3><pre><code>- 相邻兄弟:匹配下一个相邻元素。注:只能向下找。
+    语法: + 作为结合符
+        selector1 + selector2
+- 通用兄弟选择器:匹配某元素后面[所有的]兄弟元素。
+    语法: ~ 作为结合符
+        selector1 + selector2
+</code></pre><h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><pre><code>**将元素所附带的属性及值用于选择器中**
+语法: []  
+e.g.:    element[value = xx];
+    element[id];
+    [attr];
+    element[id][title];
+    结合选择符 ^ ~ $ *
+    element[id^=fun]     //匹配所有element中带有id前缀为fun的元素
+    element[id$=fun]     //匹配所有element中带有id后缀为fun的元素
+    element[class~=fun]  //匹配所有element内class属性中含有fun单词的元素
+    element[id*=fun]     //匹配所有element内id属性中含有fun字符的元素
+</code></pre><h3 id="伪类选择器"><a href="#伪类选择器" class="headerlink" title="伪类选择器"></a>伪类选择器</h3><pre><code>- 链接伪类
+    - selector:link
+        选择所有未被访问的链接元素。
+    - selector:visited
+        选择所有已被访问的链接元素。
+- 动态伪类(当某一活动事件发生时，触发并修改元素样式)
+    - selector:hover
+        当鼠标悬浮在该元素上时，触发该选择器
+    - selector:active
+        当鼠标点击该元素时，触发选择器
+    - selector:focus
+        当焦点在该元素上时，触发。e.g. : input在填写过程中就会触发其效果
+- 目标伪类(修改被触发的html锚点元素的样式)
+    - selector:target
+        当锚点元素被触发时，修改锚点样式
+- 元素状态伪类
+    - selector:enabled
+    - selector:disabled
+    - selector:checked
+- 结构伪类
+    - selector:first-child        匹配属于其父元素的首个子元素
+    - selector:last-child        匹配属于其父元素的最后一个子元素
+    - selector:nth-child(n)        匹配属于其父元素的第n个子元素
+    - selector:only-child        匹配属于其父元素的唯一子元素
+    - selector:empty(n)        匹配没有子元素(子节点)的每个元素
+- 否定伪类
+    - selector1:not(selector2)    排除指定元素中包含指定选择器的元素
+        e.g． :　a:not(#xx)    选择a中没有id=xx的元素
+- 伪元素选择器
+    **注意**：在CSS2中，并没有严格规定只能使用 :: 如果为了兼容性，可以全部使用:
+            : 一般只用于伪类选择器
+            :: 一般只用于 伪元素选择器
+    - :before / ::before    匹配元素内容区域的前端
+    - :after / ::after    匹配元素内容区域的后端
+    !!!内容生成:
+        配合 :before/:after 使用可以向指定区域添加新内容
+        e.g.: div:before{ content:&quot;&quot; }
+        可以添加字符串，url，图片路径，计数器
+</code></pre><blockquote>
+<h2 id="计数器"><a href="#计数器" class="headerlink" title="计数器"></a>计数器</h2></blockquote>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><pre><code>可以生成规律的序号、数字，配合内容生成，产生自动序号
+</code></pre><h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><pre><code>- counter-reset 属性
+    初始化一个计数器
+语法:    counter-reset:name [value];
+注意：初始值可以省略，默认为0;
+      初始值可以为负数;
+      可以同时初始化多个计数器:    ==&gt; counter-reset:name1 value1 name2 value2;
+      使用时，最好放在使用元素的父元素上声明。 ==&gt; scope!
+- counter-increment 
+    设置每次的增量，默认为1;
+语法： counter-increment:name [value] ...;
+注意：    可以同时对多个计数器进行修改增量操作。
+    可以递增也可以递减
+    谁用计数器谁设置这个属性
+- counter(name) 函数
+    作为属性值出现在 content属性中
+    配合伪元素选择器一起使用
+</code></pre><blockquote>
+<h2 id="多列"><a href="#多列" class="headerlink" title="多列"></a>多列</h2></blockquote>
+<h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><pre><code>- column-count:n    将指定元素分割成n列
+- column-gap:n px    列的间距为n px
+- column-rule:1px solid #ddd    列之间的边框 宽度 样式 色彩
+</code></pre><h4 id="兼容性问题："><a href="#兼容性问题：" class="headerlink" title="兼容性问题："></a>兼容性问题：</h4><pre><code>IE10以上及opera原生支持
+safari及chrome 需要前缀 -webkit-
+firefox需要-moz-
+</code></pre><blockquote>
+<h2 id="CSS-HACK-经久不变，除非市场能彻底淘汰IE系列产品"><a href="#CSS-HACK-经久不变，除非市场能彻底淘汰IE系列产品" class="headerlink" title="CSS HACK(经久不变，除非市场能彻底淘汰IE系列产品..)"></a>CSS HACK(经久不变，除非市场能彻底淘汰IE系列产品..)</h2></blockquote>
+<h3 id="类内部HACK"><a href="#类内部HACK" class="headerlink" title="类内部HACK"></a>类内部HACK</h3><pre><code>通过增加属性的前缀 或者 值的后缀来解决(ps:就不献丑了，写几个自己在用的就好了..)
+*:   IE7 前缀
+-:   IE6 前缀
+\0:  IE8 后缀
+\9\0: IE9 IE10 后缀
+-webkit-: chrome/safari 前缀
+-moz-   : firefox 前缀
+-o-    : Opera 前缀
+-ms-    : 微软前缀。。
+</code></pre><h3 id="选择器前缀"><a href="#选择器前缀" class="headerlink" title="选择器前缀"></a>选择器前缀</h3><pre><code>*selector: IE6
+*+selector: IE7
+</code></pre><h3 id="HTML头部使用条件注释"><a href="#HTML头部使用条件注释" class="headerlink" title="HTML头部使用条件注释"></a>HTML头部使用条件注释</h3><pre><code>&lt;!--[if IE]&gt;
+    &lt;link href=&quot;forie.css&quot; rely=&quot;stylesheet&quot;&gt;
+&lt;![endif]--&gt;
+gt: 大于
+lt: 小于
+gte: 大于等于
+lte: 小于等于
+</code></pre><blockquote>
+<h2 id="transform-转换-变形"><a href="#transform-转换-变形" class="headerlink" title="transform(转换,变形)"></a>transform(转换,变形)</h2></blockquote>
+<h3 id="transform-gt-为实现css3-动画与transition-而服务"><a href="#transform-gt-为实现css3-动画与transition-而服务" class="headerlink" title="transform ==&gt; 为实现css3 动画与transition 而服务"></a>transform ==&gt; 为实现css3 动画与transition 而服务</h3><pre><code>浏览器前缀:
+-webkit-transform:
+-o-transform:
+-moz-transform:
+-ms-transform:
+取值：
+none:默认值
+transform-function:一组转换函数
+transform:函数1() 函数2()....;
+PS：想要既旋转又位移只能多个函数放在一个transform里。要先位移再转比较舒服-。-
+先执行前面 后执行后面。
+包括的2D常用函数有:
+- translate(x,y) ==&gt; 位移，不需要指定中轴点
+- rotate(deg)    ==&gt; 可以指定中轴点
+- scale(x,y)     ==&gt; 1代表100%，可以指定缩放的原点
+- skew(xdeg,ydeg)==&gt; 可以指定倾斜的原点
+</code></pre><h3 id="转换的原点："><a href="#转换的原点：" class="headerlink" title="转换的原点："></a>转换的原点：</h3><pre><code>在不指定原点的前提下，默认原点为元素的中心处
+属性：transform-origin
+取值：数值/百分比/关键字
+    一个值：所有轴位置
+    两个值：x、y轴
+    三个值：x、y、z轴   
+</code></pre><h3 id="高级点的内容-3D转换"><a href="#高级点的内容-3D转换" class="headerlink" title="高级点的内容 3D转换"></a>高级点的内容 3D转换</h3><pre><code>- 要先为父容器设定视点距离 ==&gt; perspective:n;  //注意：所有的3D转换函数都必须要配合“视点”的使用。Perspective属性必须放在执行3D转换的元素的父元素身上；单位是px——指人的眼睛距屏幕的距离。同一个3D转换，若视点越近，转换效果越夸张。
+- 再通过选择器对元素进行变形 ==&gt; transform:变形函数;
+- 3D旋转 ==&gt; rotateX(deg)单杠  rotateY(deg)钢管舞  rotateZ(deg) 
+- 3D位移函数 ==&gt; translateZ(z) 与缩放类似
+- 3D缩放 ==&gt; transform: scaleZ(1.5) rotateX(45deg); //需要配合才行
+</code></pre><h3 id="transition-过渡-渐变"><a href="#transition-过渡-渐变" class="headerlink" title="transition(过渡/渐变)"></a>transition(过渡/渐变)</h3><pre><code>用户指定开始与结束的状态，然后CSS自动补全变化过程，在CSS3中transition可以制作小的图标动画效果
+语法：
+selector{
+             属性      时间       速度曲线       推迟时间
+transition: property  duration  timing-function   delay;
+}
+注意：部分CSS属性无法实现渐变，background-image &amp; font-family and so on...
+触发过渡的事件可以是JavaScript 也可以是 伪类选择器 
+如:hover :active 等 只要改变了设定的属性值，就会触发transition的动效
+就现在的兼容性而言，移动端更建议使用transform + opacity 来做过渡动画
+关键帧(keyframe)动画
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">提供一个动画中若干个关键时间点的样式属性，每相邻的两个点中间的过渡效果由CSS补充————但是关键帧动画比Transition动画多了很多关键点。</div><div class="line">语法：</div><div class="line">//定义关键帧动画</div><div class="line">@keyframes animateName&#123;</div><div class="line">	0%&#123;</div><div class="line">	    prop:value;...    </div><div class="line">	&#125;</div><div class="line">	xx%&#123;</div><div class="line">	    prop:value;...</div><div class="line">	&#125;</div><div class="line">	100%&#123;</div><div class="line">	    prop:value;..</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line">//使用关键帧动画</div><div class="line">selector&#123;</div><div class="line">	animation: name duration [timing-function delay...];</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="对比transition与keyframes"><a href="#对比transition与keyframes" class="headerlink" title="对比transition与keyframes"></a>对比transition与keyframes</h3><pre><code>1. transition 动画简单，只能指定两个时间点(开始，结束)
+   keyframes  动画复杂，可以指定多个时间点
+2. transition 兼容性支持较好
+   keyframes  在不同浏览器中需要加内核前缀 如: -webkit-  /  -moz-
+3. transition 动画触发一次只能执行一次
+   keyframes  触发一次可以反复执行多次，还可以指定执行的方向
+</code></pre>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/想起什么写什么/" rel="tag">#想起什么写什么</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/06/18/web1/" rel="next" title="前端知识复习整理 (一)">
+                <i class="fa fa-chevron-left"></i> 前端知识复习整理 (一)
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/06/18/web2/"
+           data-title="前端知识复习整理 (二、CSS3)" data-url="http://yoursite.com/2016/06/18/web2/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/zzk.jpg"
+               alt="zZ" />
+          <p class="site-author-name" itemprop="name">zZ</p>
+          <p class="site-description motion-element" itemprop="description">IT行业的文科夜猫子</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/webzzk" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#选择器"><span class="nav-number">1.</span> <span class="nav-text">选择器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#兄弟选择器"><span class="nav-number">1.1.</span> <span class="nav-text">兄弟选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#属性选择器"><span class="nav-number">1.2.</span> <span class="nav-text">属性选择器</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪类选择器"><span class="nav-number">1.3.</span> <span class="nav-text">伪类选择器</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计数器"><span class="nav-number">2.</span> <span class="nav-text">计数器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#作用"><span class="nav-number">2.1.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#函数"><span class="nav-number">2.2.</span> <span class="nav-text">函数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多列"><span class="nav-number">3.</span> <span class="nav-text">多列</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#属性"><span class="nav-number">3.1.</span> <span class="nav-text">属性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#兼容性问题："><span class="nav-number">3.1.1.</span> <span class="nav-text">兼容性问题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS-HACK-经久不变，除非市场能彻底淘汰IE系列产品"><span class="nav-number">4.</span> <span class="nav-text">CSS HACK(经久不变，除非市场能彻底淘汰IE系列产品..)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#类内部HACK"><span class="nav-number">4.1.</span> <span class="nav-text">类内部HACK</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择器前缀"><span class="nav-number">4.2.</span> <span class="nav-text">选择器前缀</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML头部使用条件注释"><span class="nav-number">4.3.</span> <span class="nav-text">HTML头部使用条件注释</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#transform-转换-变形"><span class="nav-number">5.</span> <span class="nav-text">transform(转换,变形)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#transform-gt-为实现css3-动画与transition-而服务"><span class="nav-number">5.1.</span> <span class="nav-text">transform ==> 为实现css3 动画与transition 而服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#转换的原点："><span class="nav-number">5.2.</span> <span class="nav-text">转换的原点：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#高级点的内容-3D转换"><span class="nav-number">5.3.</span> <span class="nav-text">高级点的内容 3D转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#transition-过渡-渐变"><span class="nav-number">5.4.</span> <span class="nav-text">transition(过渡/渐变)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对比transition与keyframes"><span class="nav-number">5.5.</span> <span class="nav-text">对比transition与keyframes</span></a></li></ol></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">zZ</span>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"webzzk"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+
+</body>
+</html>
