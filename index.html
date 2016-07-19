@@ -214,6 +214,16 @@
           </a>
         </li>
       
+        
+        <li class="menu-item menu-item-github">
+          <a href="https://github.com/webzzk" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-github"></i> <br />
+            
+            GitHub
+          </a>
+        </li>
+      
 
       
     </ul>
@@ -231,6 +241,145 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/20/git1/" itemprop="url">
+                  git 删除分支和删除文件夹
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-20T20:06:39+08:00" content="2016-06-20">
+              2016-06-20
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/20/git1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/git1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          删除分支
+查看所有分支  git branch -a
+
+得到结果后删除某分支  git push origin --delate yourBranchesName
+
+
+删除文件夹
+删除文件夹及所有文件  git rm yourFilesName -r -f
+
+同步删除操作到远程分支  git commit -m &quot;delate yourFilesName&quot;
+
+从新提交分支  git push origin yourBranchesName
+
+
+
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/20/git1/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -341,7 +490,18 @@ animation
     语法: ~ 作为结合符
         selector1 + selector2
 属性选择器**将元素所附带的属性及值用于选择器中**
-语法: [] 
+语法: []  
+e.g.:    element[value = xx];
+    element[id];
+    [attr];
+    element[id][title];
+    结合选择符 ^ ~ $ *
+    element[id^=fun]     //匹配所有element中带有id前缀为fun的元素
+    element[id$=fun]     //匹配所有element中带有id后缀为fun的元素
+    element[class~=fun]  //匹配所有element内class属性中含有fun单词的元素
+    element[id*=fun]     //匹配所有element内id属性中含有fun字符的元素
+伪类选择器- 链接伪类
+    - selector:l
           ...
 
           <div class="post-more-link text-center">
@@ -472,7 +632,21 @@ Microsoft IE  内核：Trident  脚本引擎：Chakra
 Firefox  内核：Gecko  脚本引擎：猴子系列
 Apple Safari  内核：Webkit  内容引擎：Webcore  脚本引擎：Nitro
 Google Chrome  内核：Webkit  内容引擎：Webcore  脚本引擎：V8(热门引擎)
-Opera  内核：Presto  脚本：Carakan  2013年以
+Opera  内核：Presto  脚本：Carakan  2013年以后  内核：Webkit  内容引擎：Webcore  脚本引擎：V8(热门引擎)
+
+数据类型原始类型(基本数据类型)，保存数值1number 数字 开辟空间:8个字节--&gt;64位
+
+整数：十进制：0-9八进制：0-7以0开始的数字 均为八进制！！十六进制：0-9 A-FA:10   F:15    所有以0x开始的数字 均为十六进制！！
+小数：称为浮点数95.865.6E2 = 5.6*10^2
+
+1string 字符串
+
+用来表示一系列的文本字符数据必须用’’or””包起来特殊字符的处理：通过转义字符来表示*\n:回车**\t:一个制表符 8个空格\”:一个双引号\’:一个单引号\\:一个杠儿
+
+boolean 布尔型
+
+
+仅有2个值：true 和 false实际运算中 true可
           ...
 
           <div class="post-more-link text-center">
@@ -599,7 +773,8 @@ Opera  内核：Presto  脚本：Carakan  2013年以
           
           Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
 模块Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。打开Node.js官网 / Node.js中文网查看帮助文档。其中大部分为模块，都可以通过 require（require表示引包，引包就是引用自己的一个特殊功能） 引用。
-选择你要使用的模块，打开，里面有详细介绍
+选择你要使用的模块，打开，里面有详细介绍及代码示例（万能的翻译软件。。）。例：
+简单使用新建任意 JS 文件12345678910111213141516171819//引包var http = require("http");//创建服务器，参数是一个回调函数，表示如果有请求进来，要做什么var server = http.createServer(function(req,res)&#123;	//req表示请求，request;  res表示响应，response	//设置HTTP头部，状态码是200，文件类型是html，字符集是utf8   	res.writeHead(200,&#123;"Content-type":"text/html;charset=UTF-8"&#125;);	// end() 结束响应，告诉客户
           ...
 
           <div class="post-more-link text-center">
@@ -728,7 +903,12 @@ Opera  内核：Presto  脚本：Carakan  2013年以
 简介与传统后台语言对比
 Node.js不是一种独立的语言，与PHP、JSP、Python、Perl、Ruby的“既是语言，也是平台”不同，Node.js的使用JavaScript进行编程，运行在JavaScript引擎上（V8）。
 
-与PHP、JSP等相比（PHP、JSP、.net都需要运行在服务器程序上，Apache、Nag
+与PHP、JSP等相比（PHP、JSP、.net都需要运行在服务器程序上，Apache、Naginx、Tomcat、IIS。），Node.js跳过了Apache、Naginx、IIS等HTTP服务器，它自己不用建设在任何服务器软件之上。Node.js的许多设计理念与经典架构（LAMP = Linux + Apache + MySQL + PHP）有着很大的不同，可以提供强大的伸缩能力。
+
+
+特点所谓的特点，就是Node.js是如何解决服务器高性能瓶颈问题的。
+单线程 ( Single thread )
+在Java、PHP或者.net等服务器端语言中，会为每一个客户端连接创建一个新的线程。而每个线程需要耗费大约2MB内存。也就是说，理论上，一个1GB内存的服务器可以同时连接的最大用户数为500个左右。要让Web应用程序支持更多的用户，就需要增加服务器的数量，而Web应用程序的硬件成本当
           ...
 
           <div class="post-more-link text-center">
@@ -803,7 +983,7 @@ Node.js不是一种独立的语言，与PHP、JSP、Python、Perl、Ruby的“�
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">4</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -811,7 +991,7 @@ Node.js不是一种独立的语言，与PHP、JSP、Python、Perl、Ruby的“�
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">3</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
