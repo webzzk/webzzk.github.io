@@ -99,7 +99,7 @@
 
 安装安装Express框架，就是使用npm的命令。1npm ins">
 <meta property="og:image" content="http://yoursite.com/nodeJs/express2.png">
-<meta property="og:updated_time" content="2016-07-25T16:18:09.198Z">
+<meta property="og:updated_time" content="2016-07-25T16:21:50.837Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="NodeJS (五、Express框架)">
 <meta name="twitter:description" content="ExpressExpress 框架是后台的Node框架，在后台的受欢迎的程度，和jQuery一样，就是企业的事实上的标准。
@@ -356,7 +356,7 @@
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.use(express.static(<span class="string">"./public"</span>));</div></pre></td></tr></table></figure>
 <ul>
-<li>模板引擎:</li>
+<li>模板引擎（以 ejs 为例）:</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var express = require(<span class="string">"express"</span>);</div><div class="line"></div><div class="line">var app = express();</div><div class="line"></div><div class="line">app.set(<span class="string">"view engine"</span>,<span class="string">"ejs"</span>);</div><div class="line"></div><div class="line">app.get(<span class="string">"/"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">    res.render(<span class="string">"haha"</span>,&#123;</div><div class="line">        <span class="string">"news"</span> : [<span class="string">"我是新闻1"</span>,<span class="string">"我是新闻2"</span>,<span class="string">"我是新闻3"</span>]</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(3000);</div></pre></td></tr></table></figure>
 <p>以上简单的说了一些关于 Express4.X版本的东西，API的具体功能及使用方法可以去<br><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express中文网</a> / <a href="http://expressjs.com/" target="_blank" rel="external">Express官网</a>查看。<br><img src="/nodeJs/express2.png" alt="image">（NodeJs及相关更新比较快，Express4.X 与 Express3.X差别很大）</p>
