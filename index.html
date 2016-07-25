@@ -263,6 +263,265 @@
             
               
                 
+                <a class="post-title-link" href="/2016/07/02/node5/" itemprop="url">
+                  NodeJS (五、Express框架)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-07-02T19:37:46+08:00" content="2016-07-02">
+              2016-07-02
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/NodeJs/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/07/02/node5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/02/node5/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          ExpressExpress 框架是后台的Node框架，在后台的受欢迎的程度，和jQuery一样，就是企业的事实上的标准。
+
+原生Node开发，会发现有很多问题。比如：呈递静态页面很不方便，需要处理每个HTTP请求，还要考虑304问题路由处理代码不直观清晰，需要写很多正则表达式和字符串函数不能集中精力写业务，要考虑很多其他的东西
+
+安装安装Express框架，就是使用npm的命令。1npm install --save express
+—save参数，表示自动修改package.json文件，自动添加依赖项。
+简单使用
+路由能力：
+
+123456789101112131415var express = require("express");var app = express();app.get("/",function(req,res)&#123;    res.send("你好");&#125;);app.get("/haha",function(req,res)&#123;   	res.send("这是haha页面，哈哈哈哈哈哈");&#125;);app.get(/^\/student\/([\d]&#123;10&#125;)$/,function(req,res)&#123;    res.send("学生信息，学号" + req.params[0]);&#125;);
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/07/02/node5/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/26/node4/" itemprop="url">
+                  NodeJS (四、Post请求与模板引擎)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-26T22:21:39+08:00" content="2016-06-26">
+              2016-06-26
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/NodeJs/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/26/node4/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/26/node4/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+          
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/26/node4/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/23/node3/" itemprop="url">
                   NodeJS (三、模块与npm)
                 </a>
@@ -650,305 +909,6 @@ linux:git config http.postBuffer 524288000
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/18/web2/" itemprop="url">
-                  前端知识复习整理 (二、CSS3)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T20:20:39+08:00" content="2016-06-18">
-              2016-06-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Web-developer/" itemprop="url" rel="index">
-                    <span itemprop="name">Web developer</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/18/web2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/web2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          
-选择器
-计数器
-多列
-CSS HACK
-transform(2D/3D)
-transition
-animation
-
-
-选择器
-兄弟选择器- 相邻兄弟:匹配下一个相邻元素。注:只能向下找。
-    语法: + 作为结合符
-        selector1 + selector2
-- 通用兄弟选择器:匹配某元素后面[所有的]兄弟元素。
-    语法: ~ 作为结合符
-        selector1 + selector2
-属性选择器**将元素所附带的属性及值用于选择器中**
-语法: []  
-e.g.:    element[value = xx];
-    element[id];
-    [attr];
-    element[id][title];
-    结合选择符 ^ ~ $ *
-    element[id^=fun]     //匹配所有element中带有id前缀为fun的元素
-    element[id$=fun]     //匹配所有element中带有id后缀为fun的元素
-    element[class~=fun]  //匹配所有element内class属性中含有fun单词的元素
-    element[id*=fun]     //匹配所有element内id属性中含有fun字符的元素
-伪类选择器- 链接伪类
-    - selector:l
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/18/web2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/18/web1/" itemprop="url">
-                  前端知识复习整理 (一)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-18T19:41:39+08:00" content="2016-06-18">
-              2016-06-18
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Web-developer/" itemprop="url" rel="index">
-                    <span itemprop="name">Web developer</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/18/web1/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/18/web1/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          浏览器内核内容排版引擎：解析HTML和CSS脚本解释引擎：解析JavaScript
-
-Microsoft IE  内核：Trident  脚本引擎：Chakra
-Firefox  内核：Gecko  脚本引擎：猴子系列
-Apple Safari  内核：Webkit  内容引擎：Webcore  脚本引擎：Nitro
-Google Chrome  内核：Webkit  内容引擎：Webcore  脚本引擎：V8(热门引擎)
-Opera  内核：Presto  脚本：Carakan  2013年以后  内核：Webkit  内容引擎：Webcore  脚本引擎：V8(热门引擎)
-
-数据类型原始类型(基本数据类型)，保存数值1number 数字 开辟空间:8个字节--&gt;64位
-
-整数：十进制：0-9八进制：0-7以0开始的数字 均为八进制！！十六进制：0-9 A-FA:10   F:15    所有以0x开始的数字 均为十六进制！！
-小数：称为浮点数95.865.6E2 = 5.6*10^2
-
-1string 字符串
-
-用来表示一系列的文本字符数据必须用’’or””包起来特殊字符的处理：通过转义字符来表示*\n:回车**\t:一个制表符 8个空格\”:一个双引号\’:一个单引号\\:一个杠儿
-
-boolean 布尔型
-
-
-仅有2个值：true 和 false实际运算中 true可
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/18/web1/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -994,7 +954,7 @@ boolean 布尔型
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">7</span>
+              <span class="site-state-item-count">9</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

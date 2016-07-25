@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="转自他人," />
+  <meta name="keywords" content="NodeJs," />
 
 
 
@@ -84,28 +84,30 @@
 
 
 
-<meta name="description" content="fatal:the remote end hung up unexpectedly发生在push命令中，有可能是push的文件过大导致 
-解决方法：
-windows:在 .git/config 文件中加入[http]postBuffer = 524288000 
+<meta name="description" content="ExpressExpress 框架是后台的Node框架，在后台的受欢迎的程度，和jQuery一样，就是企业的事实上的标准。
 
-linux:git config http.postBuffer 524288000">
+原生Node开发，会发现有很多问题。比如：呈递静态页面很不方便，需要处理每个HTTP请求，还要考虑304问题路由处理代码不直观清晰，需要写很多正则表达式和字符串函数不能集中精力写业务，要考虑很多其他的东西
+
+安装安装Express框架，就是使用npm的命令。1npm ins">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Git fatal:the remote end hung up unexpectedly">
-<meta property="og:url" content="http://yoursite.com/2016/06/20/git2/index.html">
+<meta property="og:title" content="NodeJS (五、Express框架)">
+<meta property="og:url" content="http://yoursite.com/2016/07/02/node5/index.html">
 <meta property="og:site_name" content="zZ">
-<meta property="og:description" content="fatal:the remote end hung up unexpectedly发生在push命令中，有可能是push的文件过大导致 
-解决方法：
-windows:在 .git/config 文件中加入[http]postBuffer = 524288000 
+<meta property="og:description" content="ExpressExpress 框架是后台的Node框架，在后台的受欢迎的程度，和jQuery一样，就是企业的事实上的标准。
 
-linux:git config http.postBuffer 524288000">
-<meta property="og:updated_time" content="2016-07-19T16:51:11.641Z">
+原生Node开发，会发现有很多问题。比如：呈递静态页面很不方便，需要处理每个HTTP请求，还要考虑304问题路由处理代码不直观清晰，需要写很多正则表达式和字符串函数不能集中精力写业务，要考虑很多其他的东西
+
+安装安装Express框架，就是使用npm的命令。1npm ins">
+<meta property="og:image" content="http://yoursite.com/nodeJs/express2.png">
+<meta property="og:updated_time" content="2016-07-25T16:18:09.198Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Git fatal:the remote end hung up unexpectedly">
-<meta name="twitter:description" content="fatal:the remote end hung up unexpectedly发生在push命令中，有可能是push的文件过大导致 
-解决方法：
-windows:在 .git/config 文件中加入[http]postBuffer = 524288000 
+<meta name="twitter:title" content="NodeJS (五、Express框架)">
+<meta name="twitter:description" content="ExpressExpress 框架是后台的Node框架，在后台的受欢迎的程度，和jQuery一样，就是企业的事实上的标准。
 
-linux:git config http.postBuffer 524288000">
+原生Node开发，会发现有很多问题。比如：呈递静态页面很不方便，需要处理每个HTTP请求，还要考虑304问题路由处理代码不直观清晰，需要写很多正则表达式和字符串函数不能集中精力写业务，要考虑很多其他的东西
+
+安装安装Express框架，就是使用npm的命令。1npm ins">
+<meta name="twitter:image" content="http://yoursite.com/nodeJs/express2.png">
 
 
 
@@ -123,7 +125,7 @@ linux:git config http.postBuffer 524288000">
   };
 </script>
 
-  <title> Git fatal:the remote end hung up unexpectedly | zZ </title>
+  <title> NodeJS (五、Express框架) | zZ </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -273,7 +275,7 @@ linux:git config http.postBuffer 524288000">
             
             
               
-                Git fatal:the remote end hung up unexpectedly
+                NodeJS (五、Express框架)
               
             
           </h1>
@@ -285,8 +287,8 @@ linux:git config http.postBuffer 524288000">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-20T20:46:39+08:00" content="2016-06-20">
-              2016-06-20
+            <time itemprop="dateCreated" datetime="2016-07-02T19:37:46+08:00" content="2016-07-02">
+              2016-07-02
             </time>
           </span>
 
@@ -299,8 +301,8 @@ linux:git config http.postBuffer 524288000">
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/Git/" itemprop="url" rel="index">
-                    <span itemprop="name">Git</span>
+                  <a href="/categories/NodeJs/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJs</span>
                   </a>
                 </span>
 
@@ -315,8 +317,8 @@ linux:git config http.postBuffer 524288000">
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/06/20/git2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/20/git2/" itemprop="commentsCount"></span>
+                <a href="/2016/07/02/node5/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/07/02/node5/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -339,13 +341,25 @@ linux:git config http.postBuffer 524288000">
       
 
       
-        <h2 id="fatal-the-remote-end-hung-up-unexpectedly"><a href="#fatal-the-remote-end-hung-up-unexpectedly" class="headerlink" title="fatal:the remote end hung up unexpectedly"></a>fatal:the remote end hung up unexpectedly</h2><p>发生在push命令中，有可能是push的文件过大导致 </p>
-<h3 id="解决方法："><a href="#解决方法：" class="headerlink" title="解决方法："></a>解决方法：</h3><ul>
-<li><p>windows:<br>在 .git/config 文件中加入<br>[http]<br>postBuffer = 524288000 </p>
-</li>
-<li><p>linux:<br>git config http.postBuffer 524288000 </p>
-</li>
+        <h4 id="Express"><a href="#Express" class="headerlink" title="Express"></a>Express</h4><p><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express</a> 框架是后台的Node框架，在后台的受欢迎的程度，和jQuery一样，就是企业的事实上的标准。</p>
+<ul>
+<li>原生Node开发，会发现有很多问题。比如：<br>呈递静态页面很不方便，需要处理每个HTTP请求，还要考虑304问题<br>路由处理代码不直观清晰，需要写很多正则表达式和字符串函数<br>不能集中精力写业务，要考虑很多其他的东西</li>
 </ul>
+<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>安装Express框架，就是使用npm的命令。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install --save express</div></pre></td></tr></table></figure></p>
+<p>—save参数，表示自动修改package.json文件，自动添加依赖项。</p>
+<h4 id="简单使用"><a href="#简单使用" class="headerlink" title="简单使用"></a>简单使用</h4><ul>
+<li>路由能力：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">var express = require(<span class="string">"express"</span>);</div><div class="line">var app = express();</div><div class="line">app.get(<span class="string">"/"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">    res.send(<span class="string">"你好"</span>);</div><div class="line">&#125;);</div><div class="line">app.get(<span class="string">"/haha"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">   	res.send(<span class="string">"这是haha页面，哈哈哈哈哈哈"</span>);</div><div class="line">&#125;);</div><div class="line">app.get(/^\/student\/([\d]&#123;10&#125;)$/,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">    res.send(<span class="string">"学生信息，学号"</span> + req.params[0]);</div><div class="line">&#125;);</div><div class="line">app.get(<span class="string">"/teacher/:gonghao"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">    res.send(<span class="string">"老师信息，工号"</span> + req.params.gonghao);</div><div class="line">&#125;);</div><div class="line">app.listen(3000);</div></pre></td></tr></table></figure>
+<ul>
+<li>静态文件伺服能力：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">app.use(express.static(<span class="string">"./public"</span>));</div></pre></td></tr></table></figure>
+<ul>
+<li>模板引擎:</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">var express = require(<span class="string">"express"</span>);</div><div class="line"></div><div class="line">var app = express();</div><div class="line"></div><div class="line">app.set(<span class="string">"view engine"</span>,<span class="string">"ejs"</span>);</div><div class="line"></div><div class="line">app.get(<span class="string">"/"</span>,<span class="keyword">function</span>(req,res)&#123;</div><div class="line">    res.render(<span class="string">"haha"</span>,&#123;</div><div class="line">        <span class="string">"news"</span> : [<span class="string">"我是新闻1"</span>,<span class="string">"我是新闻2"</span>,<span class="string">"我是新闻3"</span>]</div><div class="line">    &#125;);</div><div class="line">&#125;);</div><div class="line"></div><div class="line">app.listen(3000);</div></pre></td></tr></table></figure>
+<p>以上简单的说了一些关于 Express4.X版本的东西，API的具体功能及使用方法可以去<br><a href="http://www.expressjs.com.cn/" target="_blank" rel="external">Express中文网</a> / <a href="http://expressjs.com/" target="_blank" rel="external">Express官网</a>查看。<br><img src="/nodeJs/express2.png" alt="image">（NodeJs及相关更新比较快，Express4.X 与 Express3.X差别很大）</p>
 
       
     </div>
@@ -367,7 +381,7 @@ linux:git config http.postBuffer 524288000">
       
         <div class="post-tags">
           
-            <a href="/tags/转自他人/" rel="tag">#转自他人</a>
+            <a href="/tags/NodeJs/" rel="tag">#NodeJs</a>
           
         </div>
       
@@ -376,17 +390,13 @@ linux:git config http.postBuffer 524288000">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/06/20/git1/" rel="next" title="Git 删除分支和删除文件夹">
-                <i class="fa fa-chevron-left"></i> Git 删除分支和删除文件夹
+              <a href="/2016/06/26/node4/" rel="next" title="NodeJS (四、Post请求与模板引擎)">
+                <i class="fa fa-chevron-left"></i> NodeJS (四、Post请求与模板引擎)
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/06/23/node3/" rel="prev" title="NodeJS (三、模块与npm)">
-                NodeJS (三、模块与npm) <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -412,8 +422,8 @@ linux:git config http.postBuffer 524288000">
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/06/20/git2/"
-           data-title="Git fatal:the remote end hung up unexpectedly" data-url="http://yoursite.com/2016/06/20/git2/">
+      <div class="ds-thread" data-thread-key="2016/07/02/node5/"
+           data-title="NodeJS (五、Express框架)" data-url="http://yoursite.com/2016/07/02/node5/">
       </div>
     
   </div>
@@ -515,7 +525,7 @@ linux:git config http.postBuffer 524288000">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#fatal-the-remote-end-hung-up-unexpectedly"><span class="nav-number">1.</span> <span class="nav-text">fatal:the remote end hung up unexpectedly</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方法："><span class="nav-number">1.1.</span> <span class="nav-text">解决方法：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#Express"><span class="nav-number">1.</span> <span class="nav-text">Express</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#安装"><span class="nav-number">2.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#简单使用"><span class="nav-number">3.</span> <span class="nav-text">简单使用</span></a></li></ol></div>
             
           </div>
         </section>
