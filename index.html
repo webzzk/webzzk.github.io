@@ -263,6 +263,143 @@
             
               
                 
+                <a class="post-title-link" href="/2016/06/23/node3/" itemprop="url">
+                  NodeJS (三、模块与npm)
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-06-23T00:54:17+08:00" content="2016-06-23">
+              2016-06-23
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/NodeJs/" itemprop="url" rel="index">
+                    <span itemprop="name">NodeJs</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/23/node3/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/23/node3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          
+模块在Node.js中，以模块为单位划分所有功能，并且提供了一个完整的模块加载机制，这时的我们可以将应用程序划分为各个不同的部分，不可能用一个js文件去写全部的业务。
+狭义的说，每一个JavaScript文件都是一个模块；而多个JavaScript文件之间可以相互require，他们共同实现了一个功能，他们整体对外，又称为一个广义上的模块。
+
+say.js中的代码：12var hello = "你好";exports.hello = hello;
+
+hello 这个变量，是一个js文件内部才有作用域的变量。如果别人想用这个变量，那么就要用exports进行暴露。
+
+使用者：12var say = require("./say.js");console.log(say.hello);
+
+使用者用 say 来接收 exports 对象，也就是说，这里的 say 变量，就是文件中的exports变量。
+
+一个JavaScript文件，可以向外exports无数个变量、函数。但是require的时候，仅仅需要require这个JS文件一次。使用的它的变量、函数的时候，用点语法即可。所以，无形之中，增加了一个顶层命名空间。js文件中，可以用exports暴露很多东西，比如函数、变量。12345678910var hello = "你好";var haha = "哈哈";function s
+          ...
+
+          <div class="post-more-link text-center">
+            <a class="btn" href="/2016/06/23/node3/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/06/20/git2/" itemprop="url">
                   Git fatal:the remote end hung up unexpectedly
                 </a>
@@ -812,134 +949,6 @@ boolean 布尔型
 
 
     
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/06/16/node2/" itemprop="url">
-                  NodeJS (二、简单使用及模块)
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-06-16T03:41:39+08:00" content="2016-06-16">
-              2016-06-16
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/NodeJs/" itemprop="url" rel="index">
-                    <span itemprop="name">NodeJs</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/06/16/node2/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/06/16/node2/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          Node.js是一个让JavaScript运行在服务器端的开发平台，它让JavaScript的触角伸到了服务器端 （V8引擎本身是用于Chrome浏览器的JS解释部分）。
-模块Node.js中，将很多的功能，划分为了一个个mudule (模块)，为了效率，你用啥，你就require啥。打开Node.js官网 / Node.js中文网查看帮助文档。其中大部分为模块，都可以通过 require（require表示引包，引包就是引用自己的一个特殊功能） 引用。
-选择你要使用的模块，打开，里面有详细介绍及代码示例（万能的翻译软件。。）。例：
-简单使用新建任意 JS 文件12345678910111213141516171819//引包var http = require("http");//创建服务器，参数是一个回调函数，表示如果有请求进来，要做什么var server = http.createServer(function(req,res)&#123;	//req表示请求，request;  res表示响应，response	//设置HTTP头部，状态码是200，文件类型是html，字符集是utf8   	res.writeHead(200,&#123;"Content-type":"text/html;charset=UTF-8"&#125;);	// end() 结束响应，告诉客户
-          ...
-
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2016/06/16/node2/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
   </section>
 
   
@@ -985,7 +994,7 @@ boolean 布尔型
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-count">7</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
